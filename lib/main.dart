@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/data/models/auth.dart';
+import 'package:flutter_login/ui/lockedscreen/device_info.dart';
 import 'package:persist_theme/persist_theme.dart';
 import 'package:provider/provider.dart';
 
@@ -55,6 +56,7 @@ class _MyAppState extends State<MyApp> {
               "/menu": (BuildContext context) => Home(),
               "/home": (BuildContext context) => Home(),
               "/settings": (BuildContext context) => SettingsPage(),
+              "/device": (BuildContext context) => MyDevice(),
               "/create": (BuildContext context) => CreateAccount(),
             },
           ),

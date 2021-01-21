@@ -11,13 +11,13 @@ import 'newaccount.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({this.username});
-
   final String username;
 
   LoginPageState createState() => LoginPageState();
 }
 
 class LoginPageState extends State<LoginPage> {
+  bool statusRedEye = true; //  set status RedEye
   String _status = 'no-action';
   String _username, _password;
 
@@ -87,11 +87,24 @@ class LoginPageState extends State<LoginPage> {
                   ),
                   ListTile(
                     title: TextFormField(
-                      decoration: InputDecoration(labelText: 'Password'),
+                      //decoration: InputDecoration(labelText: 'Password'),
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        //border; OutlineInputBorder(),
+                        suffixIcon: IconButton(
+                            icon: Icon(Icons.remove_red_eye),
+                            onPressed: () {
+                              setState(() {
+                                statusRedEye = !statusRedEye;
+                              });
+                            }),
+                      ),
+
                       validator: (val) =>
                           val.length < 1 ? 'Password Required' : null,
                       onSaved: (val) => _password = val,
-                      obscureText: true,
+                      //obscureText: true,  // แก้ value
+                      obscureText: statusRedEye,
                       controller: _controllerPassword,
                       keyboardType: TextInputType.text,
                       autocorrect: false,

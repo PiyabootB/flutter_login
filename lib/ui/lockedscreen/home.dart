@@ -4,7 +4,9 @@ import 'package:provider/provider.dart';
 
 import '../../constants.dart';
 import '../../data/models/auth.dart';
-import '../app/app_drawer.dart';
+import '../../ui/app/app_drawer.dart';
+
+
 
 class Home extends StatelessWidget {
   @override
@@ -13,7 +15,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Home",
+          "My Account",
           textScaleFactor: textScaleFactor,
         ),
         actions: <Widget>[
@@ -87,4 +89,6 @@ class Home extends StatelessWidget {
       ),
     );
   }
+
+  
 }

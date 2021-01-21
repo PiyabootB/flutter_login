@@ -139,7 +139,9 @@ class AuthModel extends ChangeNotifier {
       },
     );
     if (_data.statusCode == 200) {
+      print(json.decode(_data.body)["data"]);
       var errorcode = json.decode(_data.body)["data"]["errorcode"];
+
       if (errorcode == 1) {
         errorMessage = json.decode(_data.body)["data"]["text"];
         return false;
