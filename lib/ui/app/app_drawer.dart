@@ -89,6 +89,16 @@ class AppDrawer extends StatelessWidget {
                 Navigator.of(context).popAndPushNamed("/device");
               },
             ),
+            ListTile(
+              leading: Icon(Icons.perm_device_info),
+              title: Text(
+                'Share Preferences',
+                textScaleFactor: textScaleFactor,
+              ),
+              onTap: () {
+                Navigator.of(context).popAndPushNamed("/shareprefer");
+              },
+            ),
         
             Divider(),
 
