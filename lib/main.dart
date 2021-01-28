@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login/covid/covid.dart';
+import 'package:flutter_login/covid/CovidStatus.dart';
+// import 'package:flutter_login/covid/covidpage.dart';
 import 'package:flutter_login/data/models/auth.dart';
 import 'package:flutter_login/ui/lockedscreen/device_info.dart';
+import 'package:flutter_login/screen/finance.dart';
+// import 'package:flutter_login/screen/form_screen.dart';
+import 'package:flutter_login/ui/lockedscreen/geolocator.dart';
 import 'package:flutter_login/ui/lockedscreen/shared_preferences.dart';
 import 'package:persist_theme/persist_theme.dart';
 import 'package:provider/provider.dart';
@@ -57,8 +63,11 @@ class _MyAppState extends State<MyApp> {
               "/menu": (BuildContext context) => Home(),
               "/home": (BuildContext context) => Home(),
               "/settings": (BuildContext context) => SettingsPage(),
+              "/covid": (BuildContext context) => CovidPages(),
               "/device": (BuildContext context) => MyDevice(),
               "/shareprefer": (BuildContext context) => SharePrefer(),
+              "/geolocator": (BuildContext context) => HomePage(),
+              "/finance": (BuildContext context) => Finance(),
               "/create": (BuildContext context) => CreateAccount(),
             },
           ),

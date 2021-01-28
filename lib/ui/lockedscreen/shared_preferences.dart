@@ -17,7 +17,7 @@ class SharePrefer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'SharedPreferences Demo',
+      title: 'SharedPreferences',
       home: SharedPreferencesDemo(),
     );
   }
@@ -45,6 +45,7 @@ class SharedPreferencesDemoState extends State<SharedPreferencesDemo> {
     });
   }
 
+
   @override
   void initState() {
     super.initState();
@@ -57,7 +58,7 @@ class SharedPreferencesDemoState extends State<SharedPreferencesDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("SharedPreferences Demo"),
+        title: const Text("SharedPreferences"),
       ),
       body: Center(
           child: FutureBuilder<int>(
@@ -82,6 +83,7 @@ class SharedPreferencesDemoState extends State<SharedPreferencesDemo> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
+
     );
   }
 }

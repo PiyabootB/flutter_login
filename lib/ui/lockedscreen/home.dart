@@ -18,12 +18,12 @@ class Home extends StatelessWidget {
           "My Account",
           textScaleFactor: textScaleFactor,
         ),
-        actions: <Widget>[
+       /* actions: <Widget>[
           IconButton(
             icon: Icon(Icons.settings),
             onPressed: () => Navigator.pushNamed(context, '/settings'),
           )
-        ],
+        ],  */
       ),
       drawer: AppDrawer(),
       body: SingleChildScrollView(
